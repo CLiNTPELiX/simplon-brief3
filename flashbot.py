@@ -7,6 +7,7 @@ from time import sleep
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = myclient["myrssdb"]
 mycol = mydb["myrsscol"]
+
 class FlashbotSpider(scrapy.Spider):
     name = 'flashbot'
     allowed_domains = ['rss.jobsearch.monster.com']
@@ -15,7 +16,7 @@ class FlashbotSpider(scrapy.Spider):
     #start_urls = ['file:///home/dan/Code/repositoryGIT/simplon-brief3/rssquery.xml']
     start_urls = ['http://rss.jobsearch.monster.com/rssquery.ashx?q={query}']
 
-    thesaurus = ["machine learning", "machine", "learning", "big data", "big", "data"]
+    thesaurus = ["machine learning", "machine", "learning", "big data", "big", "data", "deep learning", "deep", "data", "data scientist", "scientist", "data analyst", "analyst", "data science", "science", "manager", "data manager"]
 
     #LOG_LEVEL = "INFO"
 
@@ -46,10 +47,10 @@ class FlashbotSpider(scrapy.Spider):
         for doc in response.xpath("//item"):
             item = {"query": query}
             item["id"] = doc.xpath("guid/text()").extract()
-            item["title"] = doc.xpath("title/text()").extract()
-            item["description"] = doc.xpath("description/text()").extract()
-            item["link"] = doc.xpath("link/text()").extract()
-            item["pubDate"] = doc.xpath("pubDate/text()").extract()
+            item["title"] = doc.xpath("title/text()").extract_first()
+            item["description"] = doc.xpath("description/text()").extract_first()
+            item["link"] = doc.xpath("link/text()").extract_first()
+            item["pubDate"] = doc.xpath("pubDate/text()").extract_first()
             #pprint(item, indent=2, width=120)
             # The trick Mr Potter is not minding that it hurts ;-) (Formatting the JSON correctly for MongoDB)
             item['_id'] = item['id'][0]

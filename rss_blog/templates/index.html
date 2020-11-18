@@ -1,6 +1,45 @@
 
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% for item in navigation %}
+        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+    </ul>
 
-{% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-{% endblock %}
+    <h1>Job Search</h1>
+    {# 
+    <label for="site-search">Search the job:</label>
+    <input type="search" id="site-search" name="q"
+       aria-label="Search through site content">
+    <button>Search</button>#}
+        <form action="/search/" method="post">
+            <label>Job : <input type="text" name="query" />
+            <label>Domaine</label> : <input type="text" name="Domaine" />
+            <input type="submit" value="search" />
+        </form>
+    <br />
+
+      <table style="width:100%">
+       <tr>
+         <th>titre</th>
+         <th>description</th>
+         <th>link</th>
+         <th>pubDate</th>
+       </tr>
+       {% for job in data %}
+       <tr>
+           <td>{{ job.title }}</td>
+           <td>{{ job.description }}</td>
+           <td>{{ job.link }}</td>
+           <td>{{ job.pubDate }}</td>
+       </tr>
+       {% endfor %}
+      </table>
+</body>
+</html>
+ 
