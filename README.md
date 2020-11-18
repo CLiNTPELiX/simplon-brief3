@@ -17,7 +17,7 @@ On Debian system,
 conda install conda pymongo flask scrapy
 ```
 
-* ## To start the robot (): (Download time sets at 200ms and user agent show Opera Browser)
+* ## To start the robot: (Download time sets at 200ms and user agent show Opera Browser)
 ```
 scrapy runspider flashbot.py --set=USER_AGENT="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36 OPR/72.0.3815.320
 "
