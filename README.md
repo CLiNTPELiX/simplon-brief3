@@ -1,4 +1,4 @@
-* Alpha version 0.00001 *
+* Alpha version 0.00001 * For devs only!
 
 # Creation of robot spider (2020/11/18)
 
@@ -11,9 +11,16 @@ On Debian system,
 ``` sudo docker exec -it mongodb mongo  (```if any error, try before: 'sudo docker exec -it mongodb mongo```)
 
 
-* ## To start the robot (): 
+* ## Conda env installation:
+
+```sudo apt install conda
+conda install conda pymongo flask scrapy
 ```
-scrapy runspider flashbot.py --set=USER_AGENT="OPERRRRRRRRRRRRRRRRRRRRRA"
+
+* ## To start the robot (): (Download time sets at 200ms and user agent show Opera Browser)
+```
+scrapy runspider flashbot.py --set=USER_AGENT="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36 OPR/72.0.3815.320
+"
 ```
 
 * ## To start locally, the web server:
