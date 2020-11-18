@@ -1,3 +1,5 @@
+* Alpha version 0.00001 *
+
 # Creation of robot spider (2020/11/18)
 
 On Debian system,
@@ -21,6 +23,7 @@ In the rss_blog/ directory,
 export FLASK_ENV=development  
 export FLASK_APP=app.py  
 flask run  
+```
 
 with the message:
 ```
@@ -30,7 +33,7 @@ WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-You can launch your browser with url :```http://127.0.0.1:5000/```  
+You can launch your browser with url : ```http://127.0.0.1:5000/search```  
 And try to browse the data with your own words!
 
 Have fun!
