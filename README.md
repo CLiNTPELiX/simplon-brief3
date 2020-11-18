@@ -15,13 +15,22 @@ scrapy runspider flashbot.py --set=USER_AGENT="OPERRRRRRRRRRRRRRRRRRRRRA"
 ```
 
 * ## To start locally, the web server:
-(keywords used are saved in thesaurus variable inside flashbot.py, you can try with your own)
 
-Dans le repertoire rss_blog,
+In the rss_blog/ directory,
 ```
 export FLASK_ENV=development  
 export FLASK_APP=app.py  
 flask run  
+
+with the message:
+```
+WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-have fun!
+You can launch your browser with url :```http://127.0.0.1:5000/```  
+And try to browse the data with your own words!
+
+Have fun!
