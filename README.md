@@ -8,7 +8,7 @@ On Debian system,
 
 ``` sudo apt install docker.io ```  
 ``` sudo docker run -d -p 27017:27017 -v ~/src/data/mongo-docker:/data/db --name mongodb mongo:4.2 ```  
-``` sudo docker exec -it mongodb mongo  (```if any error, try before: 'sudo docker exec -it mongodb mongo```)
+``` sudo docker exec -it mongodb mongo  ```(if any error, try before: 'sudo docker exec -it mongodb mongo)```
 
 
 * ## Conda env installation:
