@@ -13,14 +13,14 @@ On Debian system,
 
 * ## Conda env installation:
 
-```sudo apt install conda
+```
+sudo apt install conda
 conda install conda pymongo flask scrapy
 ```
 
 * ## To start the robot: (Download time sets at 200ms and user agent show Opera Browser)
 ```
 scrapy runspider flashbot.py --set=USER_AGENT="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36 OPR/72.0.3815.320
-"
 ```
 
 * ## To start locally, the web server:
@@ -34,9 +34,9 @@ flask run
 
 with the message:
 ```
-WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment.  
+   Use a production WSGI server instead.  
+ * Debug mode: off  
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
