@@ -1,6 +1,6 @@
 * Alpha version 0.00001 * For devs only!
 
-# Creation of robot spider (2020/11/18)
+# Creation of a job search robot spider (2020/11/18)
 
 On Debian system,
 
