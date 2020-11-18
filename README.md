@@ -1,9 +1,9 @@
 
-## *Lancer le robot de recherche
+## * Lancer le robot de recherche
 
 scrapy runspider flashbot.py --set=USER_AGENT="OPERRRRRRRRRRRRRRRRRRRRRA"
 
-## *Serveur Web
+## * Serveur Web
 
 export FLASK_ENV=development
 export FLASK_APP=app.py
