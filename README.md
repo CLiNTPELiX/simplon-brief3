@@ -45,4 +45,4 @@ And try to browse the data with your own words!
 
 Have fun!
 
-[](https://github.com/CLiNTPELiX/simplon-brief3/blob/main/bigjim.jpg)
+[bigjim](https://github.com/CLiNTPELiX/simplon-brief3/blob/main/bigjim.jpg)
